@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AashHub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200')
+    center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.5);
+    min-height:100vh;
+}
+
+.header{
+    text-align:center;
+    padding:20px;
+    font-size:35px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:15px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,0.2);
+    padding:10px 18px;
+    border-radius:25px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    margin-top:10px;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.upload-box{
+    text-align:center;
+    margin:30px;
+}
+
+#preview{
+    margin-top:15px;
+    max-width:250px;
+    border-radius:15px;
+    display:none;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    width:220px;
+    background:rgba(255,255,255,0.9);
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="header">AashHub</div>
+
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Upload</a>
+    <a href="#">Settings</a>
+</div>
+
+<div class="hero">
+    <h1>Welcome to AashHub</h1>
+    <p>Explore, Upload and Share</p>
+    <button class="btn" onclick="alert('Welcome to AashHub!')">
+        Get Started
+    </button>
+</div>
+
+<div class="upload-box">
+    <h2>Upload Your Photo</h2>
+    <input type="file" accept="image/*" onchange="previewImage(event)">
+    <br>
+    <img id="preview">
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h3>Gallery</h3>
+        <p>View uploaded images.</p>
+    </div>
+
+    <div class="card">
+        <h3>Weather</h3>
+        <p>Check weather updates.</p>
+    </div>
+
+    <div class="card">
+        <h3>Notes</h3>
+        <p>Save your important notes.</p>
+    </div>
+
+    <div class="card">
+        <h3>Settings</h3>
+        <p>Customize your app.</p>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 AashHub
+</div>
+
+</div>
+
+<script>
+function previewImage(event){
+    let img = document.getElementById("preview");
+    img.src = URL.createObjectURL(event.target.files[0]);
+    img.style.display = "block";
+}
+</script>
+
+</body>
+</html>
