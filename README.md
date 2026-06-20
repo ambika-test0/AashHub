@@ -11,39 +11,39 @@ body{
 }
 
 header{
-    background:rgba(0,0,0,0.7);
+    
     color:white;
-    padding:15px;
+    padding:15;
     text-align:center;
 }
 
 nav{
     background:#222;
     text-align:center;
-    padding:10px;
+    padding:10;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
+    margin:15;
     font-weight:bold;
 }
 
 .container{
-    background:rgba(255,255,255,0.9);
-    width:90%;
-    max-width:500px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:15px;
+    background:(255,255,255,0.9);
+    width:90;
+    max-width:500;
+    margin:20 auto;
+    padding:20;
+    border-radius:15;
     text-align:center;
 }
 
 .profile{
-    width:120px;
-    height:120px;
-    border-radius:50%;
+    width:120;
+    height:120;
+    border-radius:50;
     object-fit:cover;
 }
 
@@ -51,8 +51,8 @@ button{
     background:#28a745;
     color:white;
     border:none;
-    padding:10px 20px;
-    border-radius:8px;
+    padding:10 20;
+    border-radius:8;
     cursor:pointer;
 }
 
